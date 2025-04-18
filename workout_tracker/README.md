@@ -20,7 +20,7 @@ This will simulate workout parsing and logging with mock data.
 
 ## 📸 Screenshot
 
-<img src="media/screenshots/workout_demo.png" alt="Workout Tracker demo" width="600">
+<img src="media/screenshot/workout_demo.png" alt="Workout Tracker demo" width="600">
 
 ---
 

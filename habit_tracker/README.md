@@ -8,7 +8,7 @@ A real-world Python tool that helps you build better habits by logging daily pro
 
 ## 🎥 Demo
 
-<img src="media/demo/habit_tracker_demo.gif" alt="Habit Tracker CLI demo" width="600">
+<img src="media/demo/demo.gif" alt="Habit Tracker CLI demo" width="600">
 
 ---
 
