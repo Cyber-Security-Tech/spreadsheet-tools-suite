@@ -4,38 +4,39 @@ A real-world Python tool that helps you build better habits by logging daily pro
 
 🧩 This is one of three tools in the **Spreadsheet Tools Suite**, a collection of real-world Python automation projects using Google Sheets or visual dashboards to track personal productivity.
 
-## 🚀 Interactive CLI Included
+---
 
-Track your habits in seconds with a polished command-line interface:
+## 🎥 Demo
 
-```bash
-python main.py
-```
-
-```text
-📊 Habit Tracker Menu
-1. Log today's habit
-2. Log habit for a custom date
-3. Undo today's entry
-4. Open graph in browser
-5. Exit
-6. View today's logged minutes
-```
-
-You can select between different graphs (e.g., "Productivity" or "Workout"), and each graph logs to its own Pixela visual tracker.
+<img src="media/demo/habit_tracker_demo.gif" alt="Habit Tracker CLI demo" width="600">
 
 ---
 
-## 🔧 Features
+## 📸 Screenshot
 
-- ✅ Real-time habit logging via Pixela API
-- ✅ Track multiple graphs (e.g. productivity, fitness)
-- ✅ Flexible date input (YYYYMMDD, YYYY-MM-DD, or YYYY/MM/DD)
-- ✅ Undo/delete today's entry with one click
-- ✅ View your current log total for today
-- ✅ Automatically open your graph in browser
-- ✅ Clean, interactive CLI menu
-- ✅ Secure `.env` usage with `.env.example` provided
+<img src="media/screenshots/habit_tracker_demo.png" alt="Habit Tracker CLI menu" width="600">
+
+---
+
+## 🚀 Features
+
+- ✅ Real-time habit logging via Pixela API  
+- ✅ Track multiple graphs (e.g., productivity, fitness)  
+- ✅ Flexible date input (YYYYMMDD, YYYY-MM-DD, or YYYY/MM/DD)  
+- ✅ Undo/delete today's entry  
+- ✅ View your current log total for today  
+- ✅ Automatically open your graph in a browser  
+- ✅ Clean, interactive CLI menu  
+- ✅ Secure `.env` usage with `.env.example` provided  
+
+---
+
+## 🧰 Tech Stack
+
+- **Python** – Core scripting language  
+- **Pixela API** – Lightweight habit tracking backend  
+- **Requests** – For making HTTP requests to the API  
+- **Dotenv** – To manage secure environment variables  
 
 ---
 
@@ -43,12 +44,12 @@ You can select between different graphs (e.g., "Productivity" or "Workout"), and
 
 ```
 habit_tracker/
-│
 ├── main.py              # Interactive CLI menu for the Habit Tracker
 ├── habit_api.py         # All Pixela API functions (log, get, delete, open)
 ├── config.py            # Loads credentials from .env
 ├── .env.example         # Template for environment variables
 ├── .gitignore           # Ignore compiled files and .env
+├── requirements.txt     # Python dependencies
 └── README.md            # Project documentation
 ```
 
@@ -56,7 +57,7 @@ habit_tracker/
 
 ## 🔒 Environment Variables
 
-Create a `.env` file inside `habit_tracker/` with the following:
+Create a `.env` file with the following keys:
 
 ```
 PIXELA_USERNAME=your_pixela_username
@@ -64,7 +65,7 @@ PIXELA_TOKEN=your_secure_token
 PIXELA_GRAPH_ID=tracker1
 ```
 
-> Use `.env.example` as a reference template.
+Use `.env.example` as a template.
 
 ---
 
@@ -80,9 +81,9 @@ https://pixe.la/v1/users/your_username/graphs/your_graph_id.html
 
 ## 🧪 How to Run
 
-1. Clone the repo
-2. Create a Pixela account (run `main.py` to do it automatically or manually via API)
-3. Add your `.env` file
+1. Clone the repo  
+2. Create a Pixela account and graph (or log once via CLI to generate it)  
+3. Add your `.env` file  
 4. Install dependencies:
 
 ```bash
@@ -99,26 +100,29 @@ python main.py
 
 ## 💡 What I Learned
 
-- Working with REST APIs (Pixela) to post, delete, and fetch data
-- Handling flexible user input formats
-- Building professional interactive CLI tools
-- Tracking habits visually with real-world automation
+- Working with REST APIs (Pixela) to post, delete, and fetch data  
+- Handling flexible user input formats  
+- Building professional interactive CLI tools  
+- Tracking habits visually with real-world automation  
+
+---
+
+## 🛠️ Future Improvements
+
+This CLI was designed to practice real-world API integration. In the future, it could evolve into:
+- A Flask-based web version with login and dashboard
+- Graph filtering by date range or total progress stats
+- Daily push notifications for reminders
 
 ---
 
 ## 👀 Why This Project Matters
 
-This tool demonstrates:
+This project demonstrates:
 
-- ✅ Real-world API integration
-- ✅ Automation for daily routines
-- ✅ CLI design skills
-- ✅ Visual productivity tracking
+- ✅ Real-world API integration  
+- ✅ CLI interface design  
+- ✅ Automation of daily routines  
+- ✅ Visual productivity tracking with persistent storage
 
-It blends software engineering and habit science into a clean, minimalist Python project.
-
----
-
-## 🤝 Let's Connect
-
-If you're a recruiter or hiring manager interested in practical Python automation and CLI tools, feel free to connect with me! I'd love to bring these skills to your team.
+It blends software engineering and habit science into a minimalist, professional Python project.

@@ -1,6 +1,23 @@
+"""
+main.py — Entry point for the Workout Tracker tool
+
+This script uses natural language input to log workouts, parses them
+using the Nutritionix API, and stores them in a Google Sheet via Sheety.
+
+Usage:
+- Enter a workout in plain English (e.g. "ran 3 miles and did 20 min yoga")
+- Parsed exercises are printed and logged
+- Supports demo mode (toggle DEMO_MODE = True)
+
+APIs:
+- Nutritionix for parsing workouts
+- Sheety for logging to Google Sheets
+"""
+
 from workout_api import parse_workout, log_to_sheet
 
-DEMO_MODE = True  # Toggle this here
+# Toggle this to True for demo/testing mode
+DEMO_MODE = True
 
 def main():
     print("🏋️ Workout Tracker\n")

@@ -1,26 +1,48 @@
-# 🏋️ Workout Tracker
+# 🏋️ Workout Tracker – Spreadsheet Tools Suite
 
-A Python tool that tracks your workouts using natural language input and logs them to Google Sheets using the Sheety API. Supports both real and demo modes for easy testing without API setup.
+A real-world Python project that transforms natural language workout descriptions into structured exercise logs using the Nutritionix API, then stores them in a Google Sheet via the Sheety API. Users can input workouts like "ran 3 miles and did 20 min yoga," and the program automatically parses and logs the data with calories burned and duration.
 
-## 🚀 Demo Mode Included
+🧩 This is one of three tools in the **Spreadsheet Tools Suite**, a collection of real-world Python automation projects using Google Sheets and public APIs to build practical, portfolio-ready solutions.
 
-Recruiters or reviewers can test the app **without any API keys** by toggling demo mode in `main.py`:
+---
+
+## 🧪 Demo Mode Included
+
+Recruiters and reviewers can test the tool without API setup by enabling demo mode in `main.py`:
 
 ```python
 DEMO_MODE = True
 ```
 
-This simulates realistic output and logs mock data to your connected Google Sheet.
+This will simulate workout parsing and logging with mock data.
 
 ---
 
-## 🔧 Features
+## 📸 Screenshot
 
-- ✅ Parse workout descriptions with Nutritionix API (demo mode simulates it)
-- ✅ Logs workout data (exercise, duration, calories) to Google Sheets via Sheety
-- ✅ Supports real mode for full integration
+<img src="media/screenshots/workout_demo.png" alt="Workout Tracker demo" width="600">
+
+---
+
+## 🚀 Features
+
+- ✅ Accepts natural language workout input
+- ✅ Parses workouts using Nutritionix API
+- ✅ Displays exercise summary with duration and calories
+- ✅ Logs workouts to Google Sheets via Sheety API
+- ✅ Supports Demo Mode for easy testing
+- ✅ Simple, clean CLI experience
 - ✅ Secure `.env` usage with `.env.example` provided
-- ✅ Clean, modular Python codebase
+
+---
+
+## 🧰 Tech Stack
+
+- **Python** – Core scripting language  
+- **Nutritionix API** – Parses natural-language workouts  
+- **Sheety API** – Logs structured data into Google Sheets  
+- **Dotenv** – Manages environment variables securely  
+- **Requests** – Handles HTTP requests
 
 ---
 
@@ -28,45 +50,75 @@ This simulates realistic output and logs mock data to your connected Google Shee
 
 ```
 workout_tracker/
-│
-├── main.py           # CLI interface, handles user interaction
-├── workout_api.py    # Logic for API call or mock response, logs to sheet
-├── config.py         # Loads .env values securely
-├── .env.example      # Template for required environment variables
-├── requirements.txt  # Dependencies
-└── README.md         # Project overview and usage
+├── main.py              # CLI entry point with demo mode toggle
+├── workout_api.py       # Handles workout parsing and logging
+├── config.py            # Loads API credentials from .env
+├── .env.example         # Template for environment variables
+├── .gitignore           # Ensures sensitive files and compiled code are ignored
+├── requirements.txt     # Python dependencies
+└── README.md            # Project documentation
 ```
 
 ---
 
 ## 🔒 Environment Variables
 
+Create a `.env` file in the root of `workout_tracker/` with:
+
 ```
-NUTRITIONIX_APP_ID=your_app_id_here
-NUTRITIONIX_API_KEY=your_api_key_here
-SHEETY_ENDPOINT=https://api.sheety.co/your_endpoint_here
+NUTRITIONIX_APP_ID=your_app_id
+NUTRITIONIX_API_KEY=your_api_key
+SHEETY_ENDPOINT=https://api.sheety.co/your_sheet_endpoint
 ```
+
+Use `.env.example` as a reference.
 
 ---
 
-## 📊 Sample Output
+## 🧪 How to Run Locally
 
-```text
-What workout did you do?
-> ran 3 miles and did 20 min yoga
+1. Clone the repo  
+2. Add your `.env` file  
+3. Install dependencies:
 
-Workout summary:
-- Running: 30 min | 250 cal
-- Yoga: 20 min | 90 cal
-
-✅ Workout logged to Google Sheet.
+```bash
+pip install -r requirements.txt
 ```
+
+4. Run the script:
+
+```bash
+python main.py
+```
+
+Or toggle `DEMO_MODE = True` for mock mode (no API calls needed).
 
 ---
 
 ## 💡 What I Learned
 
-- Working with external APIs (Nutritionix, Sheety)
-- Handling user input and simulating responses
-- Data formatting and API automation with Google Sheets
-- Creating modular, scalable CLI tools with real/demo modes
+- Integrating multiple APIs (Nutritionix and Sheety)
+- Structuring natural language into data-rich formats
+- Creating clean CLI tools with flexible input handling
+- Using .env files securely in production-ready code
+
+---
+
+## 🛠️ Future Improvements
+
+- Add gender/weight/height input dynamically or via config  
+- Support batch logging or editing past workouts  
+- Add export options (CSV, PDF) for workout history  
+- Convert to a Flask-based web app with charts and auth
+
+---
+
+## 👀 Why This Project Matters
+
+This project blends:
+- ✅ Real-world natural language processing  
+- ✅ Useful automation for health tracking  
+- ✅ Google Sheets integration  
+- ✅ Clean CLI interaction  
+
+It demonstrates the ability to turn user-friendly input into structured, persistent data — something valuable in both consumer tools and enterprise systems.

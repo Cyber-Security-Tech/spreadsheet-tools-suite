@@ -1,3 +1,32 @@
+# Environment files
 .env
+*.env
+
+# Python cache and compiled files
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+
+# MacOS and Windows system files
+.DS_Store
+Thumbs.db
+
+# IDE and editor settings
+.vscode/
+.idea/
+
+# Logs and temp files
+*.log
+*.tmp
+
+# Jupyter notebook checkpoints (if ever used)
+.ipynb_checkpoints/
+
+# PyInstaller build directories
+build/
+dist/
+*.spec
